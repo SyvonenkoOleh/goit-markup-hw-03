@@ -21,8 +21,8 @@
   <body>
     <!-- шапка -->
 
-    <header>
-      <div class="container section-header display-flex">
+    <header class="section-header">
+      <div class="container display-flex">
         <nav class="nav display-flex">
           <a lang="en" href="./index.html" class="logo logo-header"
             >Web<span class="part-logo">Studio</span></a
@@ -45,8 +45,8 @@
     <main>
       <!-- Герой -->
 
-      <section class="hero">
-        <div class="container section-hero">
+      <section class="section-hero">
+        <div class="container">
           <h1 class="title-hero">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button-hero">Замовити послугу</button>
         </div>
@@ -54,29 +54,29 @@
 
       <!-- Особливості -->
 
-      <section class="features">
-        <div class="container section">
+      <section class="features section">
+        <div class="container">
           <h2 class="visually-hidden">Особливості</h2>
-          <ul class="list display-flex">
-            <li>
+          <ul class="list features-list">
+            <li class="box-features">
               <h3 class="title-features">Увага до деталей</h3>
               <p class="paragraph-features">
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li>
+            <li class="box-features">
               <h3 class="title-features">Пунктуальність</h3>
               <p class="paragraph-features">
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="box-features">
               <h3 class="title-features">Планування</h3>
               <p class="paragraph-features">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="box-features">
               <h3 class="title-features">Сучасні технології</h3>
               <p class="paragraph-features">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
@@ -88,8 +88,8 @@
 
       <!-- Діяльність -->
 
-      <section class="activity">
-        <div class="container section-activity">
+      <section class="activity section-activity">
+        <div class="container">
           <h2 class="title-activity">Чим ми займаємося</h2>
           <ul class="list activity-list">
             <li>
@@ -112,12 +112,11 @@
 
       <!-- Команда -->
 
-      <section class="team">
-        <div class="container section">
+      <section class="team section">
+        <div class="container">
           <h2 class="title-team">Наша команда</h2>
           <ul class="list team-list">
-            <li>
-              <div class="box-team">
+            <li class="box-team">
                 <img
                   class="img-team"
                   src="./img/photo-Igor.jpg"
@@ -125,12 +124,12 @@
                   width="270"
                   height="260"
                 />
-                <h3 class="name-team">Ігор Дем'яненко</h3>
-                <p class="position-team" lang="en">Product Designer</p>
-              </div>
+                <div class="box-title-team">
+                  <h3 class="name-team">Ігор Дем'яненко</h3>
+                  <p class="position-team" lang="en">Product Designer</p>
+                </div>
             </li>
-            <li>
-              <div class="box-team">
+            <li class="box-team">
                 <img
                   class="img-team"
                   src="./img/photo-Olga.jpg"
@@ -138,12 +137,12 @@
                   width="270"
                   height="260"
                 />
-                <h3 class="name-team">Ольга Рєпіна</h3>
-                <p class="position-team" lang="en">Frontend Developer</p>
-              </div>
+                <div class="box-title-team">
+                  <h3 class="name-team">Ольга Рєпіна</h3>
+                  <p class="position-team" lang="en">Frontend Developer</p>
+                </div>
             </li>
-            <li>
-              <div class="box-team">
+            <li class="box-team">
                 <img
                   class="img-team"
                   src="./img/photo-Mykola.jpg"
@@ -151,12 +150,13 @@
                   width="270"
                   height="260"
                 />
-                <h3 class="name-teams">Микола Тарасов</h3>
-                <p class="position-team" lang="en">Marketing</p>
-              </div>
+                <div class="box-title-team">
+                  <h3 class="name-team">Микола Тарасов</h3>
+                  <p class="position-team" lang="en">Marketing</p>
+                </div>
+
             </li>
-            <li>
-              <div class="box-team">
+            <li class="box-team">
                 <img
                   class="img-team"
                   src="./img/photo-Mykhailo.jpg"
@@ -164,9 +164,10 @@
                   width="270"
                   height="260"
                 />
-                <h3 class="name-team">Михайло Єрмаков</h3>
-                <p class="position-team" lang="en">UI Designer</p>
-              </div>
+                <div class="box-title-team">
+                  <h3 class="name-team">Михайло Єрмаков</h3>
+                  <p class="position-team" lang="en">UI Designer</p>
+                </div>
             </li>
           </ul>
         </div>
@@ -175,8 +176,8 @@
 
     <!-- ноги -->
 
-    <footer>
-      <div class="container section-footer">
+    <footer class="section-footer">
+      <div class="container">
         <div class="logo-footer">
           <a lang="en" href="./index.html" class="logo"
             >Web<span class="footer-logo">Studio</span></a
