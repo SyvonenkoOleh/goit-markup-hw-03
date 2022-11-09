@@ -117,16 +117,28 @@ header {
 }
 
 .contacts-list {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
+  align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
-
+.mailto::before {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  content:"";
+  background-image: url("../img/envelope.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.mailto:hover::before {
+  fill: #2196F3;
+}
 .contacts-list:hover,
 .contacts-list:focus {
   color: var(--primary-hover-color);
@@ -157,6 +169,7 @@ footer {
 
 address {
   font-style: normal;
+  width: 231px;
 }
 
 .link-address {
@@ -172,16 +185,65 @@ address {
 address li + li {
   margin-top: 9px;
 }
+.footer-pri {
+  margin-left: 70px;
+
+}
+.footer-set {
+  display: inline-flex;
+}
+.list-icon {
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: auto;
+  fill: #ffffff;
+}
+.footer-icont {
+  display: inline-flex;
+  height: 44px;
+  width: 44px;
+  margin-top: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-icont:hover,
+.footer-icont:focus {
+  background: #2196F3;
+}
+.footer-set li + li {
+  margin-left: 10px;
+}
+.tatle-footer {
+  padding-top: 12px;
+  /* margin-top: 12px; */
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
 
 /* -----------------------------------main------------------------------------------ */
 /* -----------------------------------hero ------------------------------------------*/
 
 .section-hero {
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   margin: 0 auto;
 
-  background: #2f303a;
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ),
+  url("../img/hero.jpg");
+  background-color: #2F303A;
+  background-size: cover;
   text-align: center;
 }
 
@@ -235,8 +297,31 @@ address li + li {
 .box-features {
   width: 270px;
 }
+
+.box-features::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background: #F5F4FA;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 .features-list li+li {
   margin-left: 30px;
+}
+.antenna::before {
+  background-image: url("../img/antenna.svg");
+}
+.clock::before {
+  background-image: url("../img/clock.svg");
+}
+.diagram::before {
+  background-image: url("../img/diagram.svg");
+}
+.astronaut::before {
+  background-image: url("../img/astronaut.svg");
 }
 /* ------------------------------------activity-------------------------------------*/
 
@@ -314,7 +399,59 @@ address li + li {
   color: var(--primary-text-color);
 }
 
-/* ---------------------------Portfolio main------------------------------- */
+.team-set {
+  display: inline-flex;
+}
+.team-list-icon {
+  height: 20px;
+  width: 20px;
+  margin: auto;
+  fill: #AFB1B8;
+}
+.team-icont {
+  display: inline-flex;
+  height: 44px;
+  width: 44px;
+  margin-top: 16px;
+  border-radius: 50%;
+}
+.team-icont:hover,
+.team-icont:focus {
+  background: #2196F3;
+}
+.team-list-icon:hover,
+.team-list-icon:focus {
+  fill: #ffffff;
+}
+.team-set li + li {
+  margin-left: 10px;
+}
+
+/* ---------------------------------visitors--------------------------------------------- */
+.visitors-list-icon {
+  display: inline-flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+.visitors-set li+li {
+  margin-left: 30px;
+}
+.visitors-list-icon:hover,
+.visitors-list-icon:focus {
+  border: 1px solid #2196F3;
+}
+.visitors-icon {
+  width: 172px;
+  height: 92px;
+  padding: 16px 31px 16px 31px;
+}
+.visitors-icon:hover,
+.visitors-icon:focus {
+  fill: #2196F3;
+}
+/* -------------------------------Portfolio main----------------------------------------- */
 
 .portfolio-filter {
   justify-content: center;
@@ -336,8 +473,6 @@ address li + li {
   text-align: center;
   background: #f5f4fa;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
@@ -345,6 +480,8 @@ address li + li {
 .button-portfolio:focus {
   color: #ffffff;
   background: var(--primary-hover-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .title-examples {
